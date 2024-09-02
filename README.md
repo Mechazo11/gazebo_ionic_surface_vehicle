@@ -1,9 +1,8 @@
-# gazebo_maritime surface vehicle generation
+# Gazebo Ionic Test and Tutorial Party 2024: gz-sim: Create a surface vehicle #1287 
 
-TODO
+Original ticket: https://github.com/gazebosim/gazebo_test_cases/issues/1287
 
-
-# Commands
+# Setup gz_maritime_ws and test Sydney Regatta Center world.
 
 * Install and source ```workspace``` from [Source Install on Ubuntu](https://github.com/gazebosim/docs/blob/master/ionic/install_ubuntu_src.md) tutorial.
 
@@ -29,7 +28,16 @@ colcon build --merge-install
 source ./install/setup.bash
 ```
 
-* Export some variables
+* Export these variables
 ```bash
-
+export GZ_SIM_RESOURCE_PATH=$GZ_SIM_RESOURCE_PATH:~/gazebo_maritime_ws/install/share/gazebo_maritime/models
+export GZ_SIM_SYSTEM_PLUGIN_PATH=$GZ_SIM_SYSTEM_PLUGIN_PATH:~/gazebo_maritime_ws/install/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/gazebo_maritime_ws/install/lib
 ```
+* Without these exports error such as ```unable to find uri(coast_waves)``` will occur
+
+* Open the Sydney Regatta Center: ```gz sim -r src/gazebo_maritime/worlds/sydney_regatta.sdf```
+
+# Create the Wave Adaptive Modular Vehicle (WAM-V)
+
+Some examples of WAM-V vehicles: https://wam-v.com/
