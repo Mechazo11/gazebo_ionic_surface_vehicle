@@ -53,3 +53,5 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/gazebo_maritime_ws/install/lib
   <uri>wam-v</uri>
 </include>
 ```
+
+* Launch gazebo and watch the boat sink!: ```gz sim src/gazebo_maritime/worlds/sydney_regatta.sdf```
