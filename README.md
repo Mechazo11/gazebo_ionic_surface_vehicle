@@ -2,6 +2,8 @@
 
 Original ticket: https://github.com/gazebosim/gazebo_test_cases/issues/1287
 
+* To see the vehicle with bouyancy and hydrodynamics set: ```TODO```
+
 # Setup gz_maritime_ws and test Sydney Regatta Center world.
 
 * Install and source ```workspace``` from [Source Install on Ubuntu](https://github.com/gazebosim/docs/blob/master/ionic/install_ubuntu_src.md) tutorial.
@@ -38,6 +40,16 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/gazebo_maritime_ws/install/lib
 
 * Open the Sydney Regatta Center: ```gz sim -r src/gazebo_maritime/worlds/sydney_regatta.sdf```
 
-# Create the Wave Adaptive Modular Vehicle (WAM-V)
+# Spwan the Wave Adaptive Modular Vehicle (WAM-V)
 
-Some examples of WAM-V vehicles: https://wam-v.com/
+* Some examples of WAM-V vehicles: https://wam-v.com/
+
+* Activate the wam-v vehicle in ```sydney_regatta.sdf``` by uncommenting the following lines
+```xml
+<!-- Uncomment this block to load the WAM-V model-->
+<include>
+  <name>wam-V</name>
+  <pose>-532 162 0 0 0 1</pose>
+  <uri>wam-v</uri>
+</include>
+```
