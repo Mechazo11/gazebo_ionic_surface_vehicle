@@ -26,6 +26,10 @@ unzip ~/gz_maritime_ws.zip
 ```bash
 cd ~/gazebo_maritime_ws
 colcon build --merge-install
+source ./install/setup.bash
 ```
 
 * Export some variables
+```bash
+
+```
