@@ -76,5 +76,6 @@ In ```~/gazebo_maritime_ws/src/gazebo_maritime/models/wam-v/model.sdf``` file ac
 
 ```bash
 colcon build --merge-install
+source ./install/setup.bash
 gz sim -r src/gazebo_maritime/worlds/sydney_regatta_wamv.sdf
 ```

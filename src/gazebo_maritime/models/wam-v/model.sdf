@@ -288,7 +288,7 @@
   </plugin> -->
 
   <!-- Uncomment to produce buoyancy on the left hull -->
-  <!-- <plugin
+  <plugin
     filename="libSurface.so"
     name="maritime::Surface">
     <link_name>base_link</link_name>
@@ -302,10 +302,10 @@
     <wavefield>
       <topic>/gazebo/wavefield/parameters</topic>
     </wavefield>
-  </plugin> -->
+  </plugin>
 
   <!-- Uncomment to produce buoyancy on the right hull -->
-  <!-- <plugin
+  <plugin
     filename="libSurface.so"
     name="maritime::Surface">
     <link_name>base_link</link_name>
@@ -319,10 +319,10 @@
     <wavefield>
       <topic>/gazebo/wavefield/parameters</topic>
     </wavefield>
-  </plugin> -->
+  </plugin>
 
   <!-- Uncomment to enable hydrodynamics -->
-  <!-- <plugin
+  <plugin
     filename="gz-sim-hydrodynamics-system"
     name="gz::sim::systems::Hydrodynamics">
     <link_name>base_link</link_name>
@@ -338,7 +338,7 @@
     <mQ>-50.0</mQ>
     <nR>-400.0</nR>
     <nAbsR>0.0</nAbsR>
-  </plugin> -->
+  </plugin>
 
 </model>
 
