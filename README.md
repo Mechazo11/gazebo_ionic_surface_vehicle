@@ -1,6 +1,10 @@
 # Gazebo Ionic Test and Tutorial Party 2024: gz-sim: Create a surface vehicle #1287 
 
-Original ticket: https://github.com/gazebosim/gazebo_test_cases/issues/1287
+* Original ticket: https://github.com/gazebosim/gazebo_test_cases/issues/1287.
+
+* **PLEASE** keep the [surface_vehicles.md](https://github.com/gazebosim/gz-sim/blob/gz-sim9/tutorials/surface_vehicles.md) open along side with this ```README.md``` as I am skipping some descriptions in favor of enabling completion of this tutorial repeatable.
+
+* Tutorial for creating a maritime-surface vehicle in Gazebo 8: https://gazebosim.org/api/sim/8/surface_vehicles.html
 
 * To see the vehicle with bouyancy and hydrodynamics set: ```TODO```
 
@@ -55,3 +59,22 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/gazebo_maritime_ws/install/lib
 ```
 
 * Launch gazebo and watch the boat sink!: ```gz sim src/gazebo_maritime/worlds/sydney_regatta.sdf```
+
+* Visulize the vehicle's **reference frame** as shown below
+
+    * Activate ```Transform Control``` from the drop down as shown below
+    ![alt text](figs/drop_down.png)
+
+    * Click on the model and visualize transform frame as shown below
+    ![alt text](figs/tf_visualized.png)
+
+# Activate buoyancy, hydrodynamics and thrust
+
+In ```~/gazebo_maritime_ws/src/gazebo_maritime/models/wam-v/model.sdf``` file activate all the commented out code blocks ```left thruster```, ```right thruster```, ```buoyancy``` on both left and right hulls and ```hydrodynamics```
+
+# Rebuild pacakge and run simulator
+
+```bash
+colcon build --merge-install
+gz sim -r src/gazebo_maritime/worlds/sydney_regatta_wamv.sdf
+```
